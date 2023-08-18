@@ -1,0 +1,195 @@
+/* resets */
+body,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.overlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.prompt {
+  background-color: white;
+  padding: 15px;
+  border: 3px solid red;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+body {
+  background-color: rgb(40, 44, 52);
+  font-family: "Poppins", sans-serif;
+  color: rgb(224, 108, 117);
+}
+
+form {
+  margin-top: 35px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgb(224, 128, 117);
+}
+
+input,
+textarea {
+  color: rgb(224, 128, 117);
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 8px;
+  min-height: 44px;
+}
+
+textarea {
+  resize: none;
+}
+
+input[type="file"] {
+  display: block;
+}
+
+.skill,
+.collaborator,
+.project {
+  position: relative;
+  padding: 30px;
+  display: inline-block;
+  border: solid black 1px;
+}
+
+.collaborator a {
+  margin: 10px;
+}
+
+.remove {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 22px;
+  color: red;
+}
+
+header {
+  height: 118.125px;
+  position: relative;
+}
+
+h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.line-y,
+.line-y-,
+.line-x,
+.line-x- {
+  background-color: black;
+}
+
+.line-y,
+.line-y- {
+  width: 7.5px;
+  height: 0.375px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.line-y- {
+  right: 0;
+}
+
+.line-x,
+.line-x- {
+  width: 0.375px;
+  height: 7.5px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.line-x- {
+  bottom: 0;
+}
+
+.circle-container {
+  height: 118.125px;
+  width: 118.125px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.circle {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  background-image: linear-gradient(
+    173deg,
+    rgba(86, 86, 221, 1) 0%,
+    rgba(168, 72, 192, 1) 100%
+  );
+  animation: rotateAnimation 15s linear infinite;
+}
+
+@keyframes rotateAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.logo-parent {
+  position: absolute;
+  width: min(100vh, 100vh);
+  top: 0;
+  left: 0;
+  transform: translate(0, 0);
+}
+
+.logo-container {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  border-radius: 50%;
+  width: 118.125px;
+  height: 118.125px;
+  top: 78.74px;
+  transform: translate(0, -50%);
+  left: 16px;
+}
+
+.svg-and-circle {
+  width: 118.125px;
+  height: 118.125px;
+}
+
+.logo-svg {
+  z-index: 1;
+  height: auto;
+  width: 84.375px;
+  position: relative;
+  top: 33.33%;
+  left: 50%;
+  transform: translate(-50%, -33.33%);
+  stroke: black;
+  stroke-width: 2;
+}
